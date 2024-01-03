@@ -27,7 +27,6 @@ class AssetsServiceProvider extends AbstractSeatPlugin
      */
     public function boot()
     {
-        $this->addCommands();
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'seat-assets');
