@@ -5,7 +5,8 @@
 
 Asset Search plugin for [SeAT](https://github.com/eveseat/seat) and was created out of necessity to see exactly check mulitple characters assets at once and to see if they have any ships in a set system.
 
-![https://i.imgur.com/UtfvJ0B.png](https://i.imgur.com/UtfvJ0B.png)
+![https://i.imgur.com/NrZ7UGn.png](https://i.imgur.com/NrZ7UGn.png)
+![https://i.imgur.com/96MfysG.png](https://i.imgur.com/96MfysG.png)
 
 ## Installation
 
