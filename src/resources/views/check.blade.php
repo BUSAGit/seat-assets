@@ -1,4 +1,4 @@
-@extends('web::layouts.grids.12', ['viewname' => 'seat-assets::check'])
+@extends('web::layouts.grids.12', ['viewname' => 'seat-assets::index'])
 
 @section('page_header', 'Asset Checker')
 
