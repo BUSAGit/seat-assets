@@ -11,10 +11,14 @@ Route::group([
     ],
 ], function()
 {
-
     Route::get('/', [
         'uses' => 'AssetsController@index',
         'as' => 'seat-assets::index',
+    ]);
+
+    Route::match(['get', 'post'], '/check', [
+        'uses' => 'AssetsController@check',
+        'as' => 'seat-assets::check'
     ]);
 
 });
