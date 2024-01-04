@@ -88,5 +88,25 @@ class AssetsController extends Controller
 
     }
 
+    /**
+     * Show the systems.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function systems(Request $request) {
+        if ($request->ajax()) {
+            $searchTerm = $request->input('search', '');
+    
+            // Fetch systems based on the search term
+            $systems = SolarSystem::where('name', 'LIKE', '%' . $searchTerm . '%')->get()->map(function ($system) {
+                return ['system_id' => $system->system_id, 'name' => $system->name];
+            });            
+    
+            return response()->json($systems);
+        }
+    
+        return redirect()->route('seat-assets::index');
+    }
+
 
 }

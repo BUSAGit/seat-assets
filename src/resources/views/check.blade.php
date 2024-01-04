@@ -11,7 +11,7 @@
             <p>
                 This result was based on the search @foreach($assetsList as $asset){{$asset}}'s,@endforeach in @foreach($systemsList as $systems){{$systems}}@endforeach
             </p>
-            <table class="table">
+            <table class="table" id="results">
                 <thead>
                     <tr>
                         <th>Hull</th>
@@ -35,3 +35,13 @@
         </div>
     </div>
 @stop
+
+@push('javascript')
+<script>
+$(document).ready(function() {
+    $('#results').DataTable({
+        "order": [[ 0, "asc" ]]
+    });
+});
+</script>
+@endpush

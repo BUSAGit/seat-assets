@@ -21,4 +21,9 @@ Route::group([
         'as' => 'seat-assets::check'
     ]);
 
+    Route::get('/systems', [
+        'uses' => 'AssetsController@systems',
+        'as' => 'seat-assets::systems'
+    ]);
+
 });

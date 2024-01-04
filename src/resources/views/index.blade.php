@@ -14,9 +14,7 @@
                     @csrf
                     <label for="system">System</label>
                     <select multiple="multiple" id="system" name="system[]" class="form-control" style="width: 100%;">
-                        @foreach ($systems as $system)
-                            <option value="{{ $system->system_id }}" {{ old('system') == $system->system_id ? 'selected' : '' }}>{{ $system->name }}</option>
-                        @endforeach
+   
                     </select>
                     <label for="assets" class="mt-2">Assets</label>
                     <select multiple="multiple" id="assets" name="assets[]" class="form-control" style="width: 100%;">
@@ -33,11 +31,37 @@
 
 @push('javascript')
 
-  <script>
-    $(document).ready(function() {
-        $('#system').select2();
-        $('#assets').select2();
+<script>
+$(document).ready(function() {
+    $('#system').select2({
+        ajax: {
+            url: '{{ route('seat-assets::systems') }}', // Use the Laravel route for the AJAX URL
+            dataType: 'json',
+            delay: 250, // Delay in milliseconds after typing before sending the AJAX request
+            data: function (params) {
+                return {
+                    search: params.term // search term
+                };
+            },
+            processResults: function (data) {
+                // Transforms the top-level key of the response object from 'data' to 'results'
+                return {
+                    results: data.map(function (item) {
+                        return {
+                            id: item.system_id,
+                            text: item.name
+                        };
+                    })
+                };
+            },
+            cache: true
+        },
+        minimumInputLength: 1 // Minimum number of characters required to start the AJAX request
     });
-  </script>
+
+    $('#assets').select2(); // Regular Select2 initialization for 'assets'
+});
+</script>
+
 
 @endpush
