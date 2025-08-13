@@ -1,5 +1,5 @@
 {
-    "name": "helious/seat-assets",
+    "name": "busa-git/seat-assets",
     "type": "library",
     "keywords": [
         "helious",
@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Helious\\SeatAssets\\": "src/"
+            "busa-git\\SeatAssets\\": "src/"
         }
     },
     "require": {
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Helious\\SeatAssets\\AssetsServiceProvider"
+                "busa-git\\SeatAssets\\AssetsServiceProvider"
             ]
         }
     }
