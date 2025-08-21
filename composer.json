@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "busa-git\\SeatAssets\\": "src/"
+            "Helious\\SeatAssets\\": "src/"
         }
     },
     "require": {
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "busa-git\\SeatAssets\\AssetsServiceProvider"
+                "Helious\\SeatAssets\\AssetsServiceProvider"
             ]
         }
     }
