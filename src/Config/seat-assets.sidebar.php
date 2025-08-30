@@ -1,7 +1,7 @@
 <?php
 return [
     [
-        'name'       => 'seat-assets::index',
+        'name'       => 'Assets',
         'label'      => 'Asset Checker',
         'icon'       => 'fas fa-search',
         'permission' => 'seat-assets.access',
