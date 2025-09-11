@@ -2,7 +2,7 @@
 
 Route::group([
 
-    'namespace' => 'Helious\SeatAssets\Http\Controllers',
+    'namespace' => 'BusaGit\SeatAssets\Http\Controllers',
     'prefix' => 'assets',
     'middleware' => [
         'web',

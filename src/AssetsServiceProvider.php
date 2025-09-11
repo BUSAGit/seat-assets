@@ -1,6 +1,6 @@
 <?php
 
-namespace Helious\SeatAssets;
+namespace BusaGit\SeatAssets;
 
 use Seat\Services\AbstractSeatPlugin;
 use Illuminate\Console\Scheduling\Schedule;

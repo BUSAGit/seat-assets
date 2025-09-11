@@ -1,6 +1,6 @@
 <?php
 
-namespace Helious\SeatAssets\Http\Controllers;
+namespace BusaGit\SeatAssets\Http\Controllers;
 
 use Seat\Eveapi\Models\Sde\SolarSystem;
 use Seat\Eveapi\Models\Sde\InvGroup;
